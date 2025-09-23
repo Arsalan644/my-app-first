@@ -1,0 +1,38 @@
+ .footer {
+  padding: 3rem 0;
+  text-align: center;
+  border-top: 1px solid #e5e7eb;
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.footer-text {
+  color: #4b5563; 
+  font-size: 1rem;
+}
+
+.store-buttons {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.store-button {
+  color: white;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.store-button.disabled {
+  cursor: not-allowed;
+}
+
