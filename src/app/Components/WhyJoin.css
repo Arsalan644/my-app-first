@@ -1,0 +1,156 @@
+.carousel-section {
+  background-color: #fcfdf5;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-section::before {
+  content: "";
+  position: absolute;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  inset: 0;
+  background: linear-gradient(
+    to bottom right,
+    white,
+    transparent,
+    rgba(34, 197, 94, 0.1)
+  );
+  opacity: 0.6;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.carousel-container {
+  padding: 5rem 2rem;
+  position: relative;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+.carousel-title {
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin-bottom: 4rem;
+}
+
+.carousel-title h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #1a1814;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.carousel-title span {
+  color: #ad9437;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.carousel-title p {
+  font-size: 1.25rem;
+  color: #4a5568;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.swiper-wrapper {
+  padding: 1rem 0.5rem;
+  align-items: stretch;
+}
+
+.swiper-slide {
+  height: auto !important;
+  display: flex;
+}
+
+.reason-card {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 2.5rem 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(173, 148, 55, 0.08);
+  transition: all 0.3s ease;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(173, 148, 55, 0.1);
+}
+
+.reason-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.reason-card h3 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1a1814;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.reason-card p {
+  color: #4b5563;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  flex-grow: 1;
+  margin: 0;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #ad9437 !important;
+  background: rgba(255, 255, 255, 0.9);
+  width: 3rem !important;
+  height: 3rem !important;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: 1.25rem !important;
+  font-weight: bold;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .carousel-container {
+    padding: 3rem 1rem;
+  }
+
+  .carousel-title h2 {
+    font-size: 2.25rem;
+  }
+
+  .carousel-title p {
+    font-size: 1.125rem;
+  }
+
+  .reason-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .reason-card h3 {
+    font-size: 1.5rem;
+  }
+
+  .reason-card p {
+    font-size: 1rem;
+  }
+}

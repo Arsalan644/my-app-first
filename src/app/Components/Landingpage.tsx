@@ -1,8 +1,11 @@
+"use client";
+import { useState } from "react";
 import React from 'react';
 import "./Landingpage.css"
 import "./Footer.css"
 import Image from 'next/image';
-
+import WhyJoin from "./WhyJoin";
+import TextLoop from "./textloop.js"
 
 // --- Header  ---
 const GenieLogo: React.FC = () => (
@@ -48,8 +51,8 @@ const Hero: React.FC = () => {
           <span className="text-sm font-medium text-gray-700">Worldwide Conversational Matchmaking</span>
         </div>
         <h1 className="text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-tight">
-          Hi, I&apos;m <span className="text-[#e017e0]">Genie</span>
-, the first AI-powered
+          Hi, I&apos;m <span className="text-[#ad9437]">Genie</span>
+          , the first AI-powered
           <br />
           matchmaker for Muslims globally.
         </h1>
@@ -68,11 +71,12 @@ const Hero: React.FC = () => {
           </button>
         </div>
 
-        <div className="hero-media relative w-1/2 h-auto flex mx-auto justify-center relative">
-          <img className="block mt-16 mx-auto w-full h-full relative right-40"
-            src="https://framerusercontent.com/images/rCIMHt27gC7cXNDlBoqtQFsq4.webp?scale-down-to=1024"
+        <div className="hero-media relative w-5/6  h-auto flex mx-auto justify-center relative">
+          <img src="/mobile.123.png" alt="Hero Image" className="w-full h-auto mt-16" />
+          {/* <img className="block mt-16 mx-auto w-full h-full relative right-40"
+            src="/mobile.123.png"
             alt="Hero Image"
-          />
+          /> */}
         </div>
       </div>
     </section>
@@ -129,7 +133,7 @@ const features: FeatureCardProps[] = [
 ];
 
 const Clip: React.FC = () => (
-  <div className="absolute -top-[1.1rem] left-1/2 -translate-x-1/2 w-8 h-8 bg-[#e017e0] rounded-lg z-20 flex justify-center items-start pt-1.5 shadow-sm">
+  <div className="absolute -top-[1.1rem] left-1/2 -translate-x-1/2 w-8 h-8 bg-[#ad9437] rounded-lg z-20 flex justify-center items-start pt-1.5 shadow-sm">
     <div className="w-2 h-2 bg-white/40 rounded-full shadow-inner"></div>
   </div>
 );
@@ -156,7 +160,7 @@ const FeatureCard: React.FC<Omit<FeatureCardProps, 'translateY'>> = ({ image, ti
 
 const Features: React.FC = () => {
   return (
-    <section className="py-24 relative overflow-hidden">
+    <section className="py-24 relative  overflow-hidden">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-16 w-[120rem] h-[120rem] border-t-2 border-gray-300/80 rounded-full" />
       <div
         className="group relative"
@@ -186,25 +190,58 @@ const Features: React.FC = () => {
 };
 
 
-const WhyJoin: React.FC = () => {
-  return (
-<section className="py-20 bg-gray-50">
-  <div className="max-w-5xl mx-auto px-6">
-    <h2 className="text-4xl font-bold mb-8 text-center">Why Genie</h2>
-    <ul className="space-y-6 text-gray-700 text-lg">
-      <li><strong>Faith-centered:</strong> Genie ensures compatibility goes beyond surface-level attraction, prioritizing faith and long-term alignment.</li>
-      <li><strong>AI-Powered:</strong> Harnessing Voice AI and psychology-backed frameworks, Genie uncovers genuine compatibility—not just swipes or photos.</li>
-      <li><strong>Global Community:</strong> Connect with Muslims worldwide, from diverse cultures and backgrounds, all seeking meaningful relationships.</li>
-      <li><strong>Privacy-first:</strong> Conversations and data are protected with end-to-end advanced encryption.</li>
-      <li><strong>Citizen Genie:</strong> Join a movement, not just an app. A share of every dollar supports Muslim institutions worldwide.</li>
-      <li><strong>Matched or you do not pay:</strong> If you do not find your match, you would not pay.</li>
-      <li><strong>Elevating Muslims globally:</strong> Beyond matchmaking, Genie uplifts Muslim voices, values, and visibility worldwide.</li>
-    </ul>
-  </div>
-</section>
-  )
-};
 
+// const GenieUsers = () => {
+//   const [selectedUser, setSelectedUser] = useState<string | null>(null);
+
+//   // Example user data
+//   const users = [
+//     { id: 1, name: "Ayesha", country: "Pakistan", top: "55%", left: "65%" },
+//     { id: 2, name: "Omar", country: "Egypt", top: "48%", left: "52%" },
+//     { id: 3, name: "Fatima", country: "UK", top: "35%", left: "38%" },
+//   ];
+
+//   return (
+//     <section className="py-20 bg-[#FFFBF5] text-center">
+//       <h2 className="text-4xl font-bold text-[#18453B] mb-4">Genie Users</h2>
+//       <p className="text-lg text-gray-700 mb-10">
+//         An app by Muslims for Muslims everywhere.
+//       </p>
+
+//       {/* Map Container */}
+//       <div className="relative w-full max-w-5xl mx-auto">
+//         <Image
+//           src="/unnamed.png" // save a map image inside /public
+//           alt="World Map"
+//           width={1200}
+//           height={600}
+//           className="rounded-xl shadow-md"
+//         />
+
+//         {/* User Markers */}
+//         {users.map((user) => (
+//           <button
+//             key={user.id}
+//             onClick={() => setSelectedUser(user.name)}
+//             className="absolute bg-[#e017e0] w-4 h-4 rounded-full shadow-md hover:scale-125 transition"
+//             style={{ top: user.top, left: user.left }}
+//           />
+//         ))}
+//       </div>
+
+//       {/* User Info Popup */}
+//       {selectedUser && (
+//         <div className="mt-6 inline-block px-6 py-3 bg-white shadow-lg rounded-xl">
+//           <p className="font-semibold text-[#18453B]">
+//             {selectedUser} is part of Genie ✨
+//           </p>
+//         </div>
+//       )}
+//     </section>
+//   );
+// };
+
+// export default GenieUsers;
 // --- Partners Component ---
 // const LogoIpsum: React.FC<{className?: string}> = ({className}) => (
 //   <svg className={`h-8 text-gray-400 ${className}`} viewBox="0 0 119 32" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -286,7 +323,7 @@ const WhyJoin: React.FC = () => {
 const Footer = () => (
   <footer className="footer">
     <div className="footer-container">
-        <button className="bg-[#18453B] text-white font-bold py-3 px-6  rounded-full shadow-lg hover:scale-105 transition-all mb-6">
+      <button className="bg-[#18453B] text-white font-bold py-3 px-6  rounded-full shadow-lg hover:scale-105 transition-all mb-6">
         Join Beta</button>
       <p className="footer-text">
         Available on Android and iOS starting 2026.
@@ -298,7 +335,7 @@ const Footer = () => (
           width={190}
           height={50}
         />
-          <Image
+        <Image
           src="/apple.png"
           alt="Google Play Store"
           width={150}
@@ -336,6 +373,7 @@ const LandingPage: React.FC = () => {
       <Header />
       <main>
         <Hero />
+        <TextLoop />
         <Features />
         <WhyJoin />
         {/* <Partners /> */}
