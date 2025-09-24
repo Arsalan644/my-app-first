@@ -5,7 +5,7 @@ import "./Footer.css"
 import Image from 'next/image';
 
 
-// --- Header Component ---
+// --- Header  ---
 const GenieLogo: React.FC = () => (
   <div className="flex items-center">
     <span className="text-3xl font-extrabold tracking-tighter text-[#18453B] text-4xl">Genie</span>
