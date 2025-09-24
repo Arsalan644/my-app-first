@@ -1,7 +1,7 @@
+
 import LandingPage from "./Components/Landingpage"
 
-export default  function myFunc (){
-
+export default  function App() {
 
   return (
     <LandingPage />

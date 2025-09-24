@@ -1,5 +1,4 @@
 import React from 'react';
-import type { JSX } from 'react';
 import "./Landingpage.css"
 import "./Footer.css"
 import Image from 'next/image';
@@ -49,7 +48,8 @@ const Hero: React.FC = () => {
           <span className="text-sm font-medium text-gray-700">Worldwide Conversational Matchmaking</span>
         </div>
         <h1 className="text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-tight">
-          Hi, I'm <span className="text-[#e017e0]">Genie</span>, the first AI-powered
+          Hi, I&apos;m <span className="text-[#e017e0]">Genie</span>
+, the first AI-powered
           <br />
           matchmaker for Muslims globally.
         </h1>
@@ -197,7 +197,7 @@ const WhyJoin: React.FC = () => {
       <li><strong>Global Community:</strong> Connect with Muslims worldwide, from diverse cultures and backgrounds, all seeking meaningful relationships.</li>
       <li><strong>Privacy-first:</strong> Conversations and data are protected with end-to-end advanced encryption.</li>
       <li><strong>Citizen Genie:</strong> Join a movement, not just an app. A share of every dollar supports Muslim institutions worldwide.</li>
-      <li><strong>Matched or you don’t pay:</strong> If you don’t find your match, you won’t pay.</li>
+      <li><strong>Matched or you do not pay:</strong> If you do not find your match, you would not pay.</li>
       <li><strong>Elevating Muslims globally:</strong> Beyond matchmaking, Genie uplifts Muslim voices, values, and visibility worldwide.</li>
     </ul>
   </div>
