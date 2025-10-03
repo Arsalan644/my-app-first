@@ -6,6 +6,7 @@ import "./Footer.css"
 import Image from 'next/image';
 import WhyJoin from "./WhyJoin";
 import TextLoop from "./textloop.js"
+import WorldMapProfiles from "./Map.jsx";
 
 // --- Header  ---
 const GenieLogo: React.FC = () => (
@@ -48,7 +49,7 @@ const Hero: React.FC = () => {
           {/* <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
             <path strokeLinecap="round" strokeLinejoin="round" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9V3m0 18a9 9 0 009-9m-9 9a9 9 0 00-9-9" />
           </svg> */}
-          <span className="text-sm font-medium text-gray-700">Worldwide Conversational Matchmaking</span>
+          <span className="world text-sm font-medium text-gray-700"><img className="bird" src="./bird.webp" alt="bird"/>Worldwide Conversational Matchmaking</span>
         </div>
         <h1 className="text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-tight">
           Hi, I&apos;m <span className="text-[#ad9437]">Genie</span>
@@ -376,6 +377,7 @@ const LandingPage: React.FC = () => {
         <TextLoop />
         <Features />
         <WhyJoin />
+        {/* <WorldMapProfiles/> */}
         {/* <Partners /> */}
         {/* <GenieUsers /> */}
       </main>
